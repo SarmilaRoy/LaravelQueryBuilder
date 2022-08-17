@@ -41,10 +41,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 Member List
+                               
                             </div>
                             <div class="col-md-6">
-                                <a href="" class="btn btn-success pull-right">Add Member</a>
+                                <a href="{{ url('/add') }}" class="btn btn-success pull-right">Add Member</a>
                             </div>
+                            @if(Session::has('msg'))
+                            <p class="alert alert-success">{{ Session::get('msg') }}</p>
+                            @endif
                         </div>
                     </div>
                     <div class="panel-body">
