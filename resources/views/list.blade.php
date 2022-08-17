@@ -61,7 +61,7 @@
                             <tbody>
                                 @foreach ($members as $key => $member)
                                     
-                                @endforeach
+                              
                                     <tr>
                                         <td>{{ $key+1 }}</td>
                                         <td>{{ $member->name }}</td>
@@ -72,9 +72,10 @@
                                             <a href="" class="btn btn-sm btn-danger"><i class="fa fa-times "></i></a>
                                         </td>
                                     </tr>
-
+                                    @endforeach
                             </tbody>
                         </table>
+                        {{ $members->links() }}
                        
                     </div>
                 </div>
