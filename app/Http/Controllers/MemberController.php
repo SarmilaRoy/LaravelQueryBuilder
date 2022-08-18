@@ -41,4 +41,32 @@ class MemberController extends Controller
 
 
     }
+
+      //edit display data
+      public function editData($id=null){
+        $editData=Member::find($id);
+        return view('edit-data',compact('editData'));
+    }
+
+
+     //update
+
+    //  public function updateData(Request $request,$id){
+    //     $updateData=Member::find($id);
+    //     $updateData->name=$request->names;
+    //     $updateData->email=$request->email;
+    //     $updateData->address=$request->address;
+    //     $updateData->save();
+    //     Session::Flash('msg','Data successfully Updated');
+    //     return redirect('/list');
+    // }
+    public function updateData(Request $request){
+        $updateData=Member::find($request->id);
+        $updateData->name=$request->names;
+        $updateData->email=$request->email;
+        $updateData->address=$request->address;
+        $updateData->save();
+        Session::Flash('msg','Data successfully Updated');
+        return redirect('/list');
+    }
 }
