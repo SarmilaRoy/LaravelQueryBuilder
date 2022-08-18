@@ -23,3 +23,4 @@ Route::get('/', function () {
 Route::get('/list', [MemberController::class,'show']);
 Route::get('/add', [MemberController::class,'adddata']);
 Route::post('/add/member', [MemberController::class,'storeData'])->name('member.addMember');
+route::get('/delete/{id}', [MemberController::class,'deleteData']);

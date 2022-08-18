@@ -31,4 +31,14 @@ class MemberController extends Controller
         return redirect('/list');
 
     }
+
+    public function deleteData($id){
+        $data=Member::find($id);
+        //dd($data);
+        $data->delete();
+        Session::Flash('msg','Data successfully Deleted');
+        return redirect('/list');
+
+
+    }
 }

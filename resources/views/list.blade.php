@@ -73,7 +73,7 @@
                                         <td>{{ $member->address }}</td>
                                         <td>
                                             <a href="" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></i></a>
-                                            <a href="" class="btn btn-sm btn-danger"><i class="fa fa-times "></i></a>
+                                            <a href="{{ url('/delete/'.$member['id']) }}" onclick="return confirm('are you sure to delete?')" class="btn btn-sm btn-danger"><i class="fa fa-times "></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
