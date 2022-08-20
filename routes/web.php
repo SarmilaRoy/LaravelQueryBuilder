@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\MemberQBController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,6 @@ route::get('/delete/{id}', [MemberController::class,'deleteData']);
 Route::get('/edit/{id}', [MemberController::class,'editData']);
 //Route::post('/updatedata/{id}', [MemberController::class,'updateData']);
 Route::post('/updatedata', [MemberController::class,'updateData']);
+
+
+Route::get('/listQB', [MemberQBController::class,'oparation']);
