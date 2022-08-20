@@ -33,10 +33,16 @@ class MemberQBController extends Controller
         //     'address'=>'USA'
         // ]);
 
-        return DB::table('member_q_b_s')
-        ->where('id',2)
-        ->delete();
-       
+        // return DB::table('member_q_b_s')
+        // ->where('id',2)
+        // ->delete();
+
+        //Aggregrate Oparation
+
+        // return DB::table('member_q_b_s')->sum('id');
+        // return DB::table('member_q_b_s')->max('name');
+        return DB::table('member_q_b_s')->avg('id');
+
        
        
     }

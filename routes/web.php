@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MemberQBController;
+use App\Http\Controllers\MemberQBController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::post('/updatedata', [MemberController::class,'updateData']);
 
 
 Route::get('/listQB', [MemberQBController::class,'oparation']);
+
+//Route::get('/listQB', [MemberQBController::class,'oparation']);
